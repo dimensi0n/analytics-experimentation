@@ -6,6 +6,9 @@
   "repository": "https://github.com/dimensi0n/analytics-experimentation",
   "author": "Erwan dimensi0n ROUSSEL",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
   "devDependencies": {
     "nodemon": "^1.18.11"
   },
