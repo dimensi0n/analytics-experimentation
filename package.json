@@ -1,0 +1,16 @@
+{
+  "name": "analytics-experimentation",
+  "version": "1.0.0",
+  "description": "Create a simple analytics service with websocket",
+  "main": "server.js",
+  "repository": "https://github.com/dimensi0n/analytics-experimentation",
+  "author": "Erwan dimensi0n ROUSSEL",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
