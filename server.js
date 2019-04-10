@@ -12,10 +12,16 @@ app.get('/', ({res}) => {
     res.sendFile(__dirname + '/public/index.html')
 })
 
-io.on('connection', socket => {
-    console.log('A user is connected')
 
-    socket.on('disconnect', () => console.log('User disconected'))
+io.on('connection', socket => {
+    let initial_date = new Date()
+    console.log(`A user is connected at ${initial_date}`)
+
+    socket.on('disconnect', () => {
+        let time = Math.abs(new Date()-initial_date)
+        const sec = Math.floor((time/1000) % 60)
+        console.log(`User disconnected at ${new Date()} after ${sec} seconds`)
+    })
     socket.on('new_visitor', msg => {
         console.log(`New visitor from ${msg.city}, ${msg.region} in ${msg.country} with IP : ${msg.ip}`)
     })
